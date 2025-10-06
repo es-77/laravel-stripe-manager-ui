@@ -111,13 +111,13 @@ export const TrialInfo: React.FC<TrialInfoProps> = ({
                 {isTrialActive ? 'Active' : 'Inactive'}
               </span>
             </div>
-            {trialStart && (
+            {trialStart && trialInfo.trial_start && (
               <div className="flex justify-between">
                 <span className="text-gray-600">Started:</span>
                 <span className="font-medium">{formatDate(trialInfo.trial_start)}</span>
               </div>
             )}
-            {trialEnd && (
+            {trialEnd && trialInfo.trial_end && (
               <div className="flex justify-between">
                 <span className="text-gray-600">Ends:</span>
                 <span className="font-medium">{formatDate(trialInfo.trial_end)}</span>

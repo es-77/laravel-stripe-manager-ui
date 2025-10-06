@@ -7,7 +7,7 @@ interface StripeManagerContextType {
   token?: string;
 }
 
-const StripeManagerContext = createContext<StripeManagerContextType | undefined>(undefined);
+export const StripeManagerContext = createContext<StripeManagerContextType | undefined>(undefined);
 
 interface StripeManagerProviderProps {
   baseUrl: string;

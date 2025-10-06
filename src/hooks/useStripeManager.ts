@@ -11,7 +11,11 @@ import {
 } from '../types';
 
 export const useStripeManager = (): UseStripeManagerReturn => {
-  const { api } = useContext(StripeManagerContext);
+  const context = useContext(StripeManagerContext);
+  if (!context) {
+    throw new Error('useStripeManager must be used within a StripeManagerProvider');
+  }
+  const { api } = context;
 
   // State
   const [plans, setPlans] = useState<Plan[]>([]);
