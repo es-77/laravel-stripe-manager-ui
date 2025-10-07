@@ -1,6 +1,6 @@
 {
   "name": "laravel-stripe-manager-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A customizable React UI package for Laravel Stripe Manager API endpoints",
   "main": "dist/index.js",
@@ -35,9 +35,20 @@
   "bugs": {
     "url": "https://github.com/es-77/laravel-stripe-manager-ui/issues"
   },
+  "sideEffects": [
+    "*.css"
+  ],
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": false
+    },
+    "react-dom": {
+      "optional": false
+    }
   },
   "dependencies": {
     "axios": "^1.6.0",

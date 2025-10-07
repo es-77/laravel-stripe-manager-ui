@@ -1,0 +1,53 @@
+# Source files
+src/
+examples/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Build files
+tsconfig.json
+rollup.config.js
+tailwind.config.js
+postcss.config.cjs
+
+# Development files
+.eslintrc
+.eslintrc.json
+.eslintignore
+.gitignore
+.git/
+.github/
+
+# Documentation
+*.md
+!README.md
+
+# Node modules
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.env
+.env.local
+.env.*.local
+coverage/
+.nyc_output/
+

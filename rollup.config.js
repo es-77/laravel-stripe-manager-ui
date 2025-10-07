@@ -16,6 +16,7 @@ export default [
         file: packageJson.main,
         format: 'cjs',
         sourcemap: true,
+        exports: 'named',
       },
       {
         file: packageJson.module,
@@ -26,10 +27,12 @@ export default [
     plugins: [
       resolve({
         browser: true,
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       }),
       commonjs(),
       typescript({
         tsconfig: './tsconfig.json',
+        exclude: ['**/*.test.ts', '**/*.test.tsx'],
       }),
       postcss({
         extract: true,
@@ -37,7 +40,17 @@ export default [
       }),
       terser(),
     ],
-    external: ['react', 'react-dom'],
+    external: [
+      'react',
+      'react-dom',
+      'react/jsx-runtime',
+      /^react\//,
+      /^react-dom\//,
+      'axios',
+      'framer-motion',
+      'clsx',
+      'tailwind-merge',
+    ],
   },
   {
     input: 'dist/index.d.ts',

@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2024-01-15
+
+### Fixed
+- **Critical**: Fixed React duplicate instance error that caused "Cannot read properties of undefined (reading 'ReactCurrentDispatcher')" 
+- Updated Rollup configuration to properly externalize React, React-DOM, and all peer dependencies
+- Added `sideEffects` field to package.json for better tree-shaking
+- Added `peerDependenciesMeta` for explicit peer dependency requirements
+
+### Added
+- Comprehensive troubleshooting guide (TROUBLESHOOTING.md)
+- `.npmignore` file to ensure clean package distribution
+- Better documentation for common installation issues
+
+### Changed
+- Improved Rollup build configuration with better external dependencies handling
+- Added regex patterns to externalize all React-related imports (including `react/jsx-runtime`)
+- Enhanced README with installation troubleshooting section
+
 ## [1.0.0] - 2024-01-01
 
 ### Added

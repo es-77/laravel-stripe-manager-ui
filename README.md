@@ -22,6 +22,14 @@ A customizable React + TypeScript UI package for Laravel Stripe Manager API endp
 npm install laravel-stripe-manager-ui
 ```
 
+**Important:** Make sure you have React and React-DOM installed as peer dependencies:
+
+```bash
+npm install react react-dom
+```
+
+If you encounter any issues, see the [Troubleshooting Guide](TROUBLESHOOTING.md).
+
 ## Quick Start
 
 ### 1. Wrap your app with the provider
@@ -356,6 +364,41 @@ const hook: UseStripeManagerReturn = useStripeManager();
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Troubleshooting
+
+### Common Issues
+
+#### React Duplicate Instance Error
+
+If you encounter the error: `Cannot read properties of undefined (reading 'ReactCurrentDispatcher')`, this means there are multiple React instances. 
+
+**Quick Fix:**
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+For more solutions, see the [Troubleshooting Guide](TROUBLESHOOTING.md).
+
+#### Module Not Found
+
+Ensure all dependencies are installed:
+
+```bash
+npm install react react-dom axios framer-motion
+```
+
+#### Styling Not Working
+
+Make sure to import the CSS file:
+
+```tsx
+import 'laravel-stripe-manager-ui/dist/index.css';
+```
+
+For more issues and solutions, check the [Troubleshooting Guide](TROUBLESHOOTING.md).
 
 ## Support
 
